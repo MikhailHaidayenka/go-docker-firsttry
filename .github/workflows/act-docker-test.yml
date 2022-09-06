@@ -17,4 +17,4 @@ jobs:
         run: docker build -t ghcr.io/go-docker-firsttry:latest .
 
       - name: push image
-        run: docker push ghcr.io/go-docker-firsttry:latest .
+        run: docker push ghcr.io/go-docker-firsttry:latest
