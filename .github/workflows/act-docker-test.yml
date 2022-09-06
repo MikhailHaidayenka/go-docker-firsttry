@@ -19,12 +19,12 @@ jobs:
       #      - run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
       #      - run: docker build -t ghcr.io/go-docker-firsttry:$(date +%s) .
 
-      #      - name: log to the registry
-      #        uses: docker/login-action@v2
-      #        with:
-      #          registry: ${{ env.REGISTRY }}
-      #          username: ${{ github.actor }}
-      #          password: ${{ secrets.TEST_ACTIONS }}
+      - name: log to the registry
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.TEST_ACTIONS }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
