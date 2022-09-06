@@ -40,6 +40,7 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 #          test it and add token to environment
-          secrets: github_token=${{ secrets.CR_PAT }}
+          secrets: |
+            "github_token=${{ secrets.CR_PAT }}"
 
 
