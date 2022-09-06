@@ -19,12 +19,12 @@ jobs:
       #      - run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
       #      - run: docker build -t ghcr.io/go-docker-firsttry:$(date +%s) .
 
-#      - name: log to the registry
-#        uses: docker/login-action@v2
-#        with:
-#          registry: ${{ env.REGISTRY }}
-#          username: ${{ github.actor }}
-#          password: ${{ secrets.CR_PAT }}
+      - name: log to the registry
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.CR_PAT }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
@@ -40,7 +40,7 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 #          test it and add token to environment
-          secrets: |
-            "github_token=${{ secrets.CR_PAT }}"
+#          secrets: |
+#            "github_token=${{ secrets.CR_PAT }}"
 
 
