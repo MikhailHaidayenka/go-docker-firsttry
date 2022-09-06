@@ -1,4 +1,4 @@
-name: ingestor
+name: actions-test
 
 on:
   push:
