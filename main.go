@@ -2,12 +2,16 @@ package main
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
+	"github.com/mather-economics/common-tools/utils"
 	"github.com/valyala/fasthttp"
 	"os"
 )
 
 func main() {
+	e := errors.New("tratata")
+	utils.Check(e)
 	paths := func(ctx *fasthttp.RequestCtx) {
 		switch string(ctx.Path()) {
 		case "/test":

@@ -7,6 +7,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
+  TOKEN: ${{ secrets.CR_PAT }}
 
 jobs:
   build:
@@ -36,6 +37,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-#          test it and add token to environment
+          build-args: |
+            ACCESS_TOKEN=${{ secrets.CR_PAT }}
 #          secrets: |
 #            "github_token=${{ secrets.CR_PAT }}"
