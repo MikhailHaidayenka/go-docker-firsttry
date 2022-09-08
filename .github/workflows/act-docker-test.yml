@@ -38,6 +38,6 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            ACCESS_TOKEN=${{ secrets.CR_PAT }}
+            ACCESS_TOKEN=TOKEN
 #          secrets: |
 #            "github_token=${{ secrets.CR_PAT }}"
