@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/mather-economics/common-tools/connections"
 	"github.com/mather-economics/common-tools/utils"
 	"github.com/valyala/fasthttp"
 	"os"
@@ -12,6 +13,10 @@ import (
 func main() {
 	e := errors.New("tratata")
 	utils.Check(e)
+
+	k := connections.KafkaReader{}
+	_ = k
+
 	paths := func(ctx *fasthttp.RequestCtx) {
 		switch string(ctx.Path()) {
 		case "/test":
