@@ -14,7 +14,7 @@ func main() {
 	e := errors.New("tratata")
 	utils.Check(e)
 
-	k := connections.KafkaReader{}
+	k := connections.Consumer{}
 	_ = k
 
 	paths := func(ctx *fasthttp.RequestCtx) {
