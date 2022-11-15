@@ -1,4 +1,4 @@
-module docker_tests
+module github.com/MikhailHaidayenka/go-docker-firsttry
 
 go 1.18
 
