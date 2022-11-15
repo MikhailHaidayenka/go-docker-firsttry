@@ -1,4 +1,4 @@
-package go_docker_firsttry
+package tada
 
 func TestFunc() string {
 	return "test"

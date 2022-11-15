@@ -5,7 +5,7 @@ RUN GOCACHE=OFF
 RUN go env -w GOPRIVATE=github.com/mather-economics
 
 WORKDIR /go/test
-COPY . .
+COPY ../.. .
 
 ARG ACCESS_TOKEN
 ENV ACCESS_TOKEN=$ACCESS_TOKEN

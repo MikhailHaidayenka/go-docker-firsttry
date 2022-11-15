@@ -1,4 +1,4 @@
-module github.com/MikhailHaidayenka/go-docker-firsttry
+module github.com/MikhailHaidayenka/go-docker-firsttry/tools/tada
 
 go 1.18
 
